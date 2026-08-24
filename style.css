@@ -66,19 +66,28 @@ nav {
 }
 
 .logo {
-    font-size: 1.2rem;
-    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
 
-    background: linear-gradient(
-        90deg,
-        #60a5fa,
-        #a78bfa,
-        #22d3ee
-    );
+.logo img {
+    width: 45px;
+    height: 45px;
 
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 2px solid rgba(255, 255, 255, 0.5);
+
+    box-shadow:
+        0 0 20px rgba(99, 102, 241, 0.35);
+
+    transition: 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.08);
 }
 
 nav ul {
