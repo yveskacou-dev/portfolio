@@ -1,0 +1,426 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #f8fafc;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.35), transparent 30%),
+        radial-gradient(circle at 90% 10%, rgba(6, 182, 212, 0.25), transparent 30%),
+        radial-gradient(circle at 50% 90%, rgba(168, 85, 247, 0.25), transparent 35%),
+        #050816;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* =========================
+   HEADER / NAVIGATION
+========================= */
+
+header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1100px;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    background: linear-gradient(
+        90deg,
+        #60a5fa,
+        #a78bfa,
+        #22d3ee
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+nav ul {
+    display: flex;
+    gap: 28px;
+}
+
+nav ul a {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.95rem;
+    transition: 0.3s ease;
+}
+
+nav ul a:hover {
+    color: white;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 110px 0;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+#accueil {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-top: 150px;
+}
+
+#accueil p:first-child {
+    color: #67e8f9;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#accueil h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 1;
+    margin: 20px 0;
+
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #a5b4fc,
+        #67e8f9
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+#accueil h2 {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    color: #a78bfa;
+    margin-bottom: 20px;
+}
+
+#accueil p {
+    max-width: 650px;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 1.1rem;
+}
+
+
+/* =========================
+   BOUTONS
+========================= */
+
+#accueil a {
+    display: inline-block;
+
+    margin-top: 30px;
+    margin-right: 12px;
+
+    padding: 13px 24px;
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    transition: 0.3s ease;
+}
+
+#accueil a:first-of-type {
+    background: linear-gradient(
+        135deg,
+        #6366f1,
+        #8b5cf6
+    );
+
+    border: none;
+}
+
+#accueil a:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 10px 30px rgba(99, 102, 241, 0.3);
+}
+
+
+/* =========================
+   TITRES
+========================= */
+
+section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #a5b4fc
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+
+/* =========================
+   À PROPOS
+========================= */
+
+#apropos {
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 30px;
+
+    padding: 60px;
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+#apropos p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 15px;
+    max-width: 800px;
+}
+
+
+/* =========================
+   COMPÉTENCES
+========================= */
+
+#competences ul {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(180px, 1fr));
+
+    gap: 18px;
+}
+
+#competences li {
+    padding: 25px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 20px;
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    color: rgba(255, 255, 255, 0.85);
+
+    transition: 0.35s ease;
+}
+
+#competences li:hover {
+    transform: translateY(-8px);
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border-color: rgba(129, 140, 248, 0.6);
+
+    box-shadow:
+        0 15px 40px rgba(99, 102, 241, 0.2);
+}
+
+
+/* =========================
+   PROJETS
+========================= */
+
+#projets {
+    background: rgba(255, 255, 255, 0.04);
+
+    border-radius: 30px;
+
+    padding: 60px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+#projets p {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+#contact p {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+#contact a {
+    display: inline-block;
+
+    margin-top: 25px;
+    margin-right: 12px;
+
+    padding: 12px 22px;
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    transition: 0.3s ease;
+}
+
+#contact a:hover {
+    transform: translateY(-4px);
+
+    background: rgba(99, 102, 241, 0.25);
+
+    border-color: rgba(129, 140, 248, 0.6);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 40px 20px;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#accueil > * {
+    animation: apparition 0.8s ease forwards;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        width: 94%;
+        top: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #accueil {
+        padding-top: 180px;
+    }
+
+    #accueil h1 {
+        font-size: 3.2rem;
+    }
+
+    section {
+        width: 90%;
+        padding: 80px 0;
+    }
+
+    #apropos,
+    #projets {
+        padding: 35px 25px;
+    }
+}
