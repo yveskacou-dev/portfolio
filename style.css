@@ -479,3 +479,19 @@ footer {
         display: flex;
     }
 }
+
+#texte-dynamique {
+    display: inline-block;
+    min-height: 1.2em;
+
+    background: linear-gradient(
+        90deg,
+        #67e8f9,
+        #a78bfa,
+        #818cf8
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
